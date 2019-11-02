@@ -23,9 +23,10 @@
     },
     "editor.minimap.enabled": false,
 
+    "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "python": "cd $dir && python $fileName",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt"
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     },
 
     "python.terminal.activateEnvironment": false,
