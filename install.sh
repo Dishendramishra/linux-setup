@@ -9,7 +9,7 @@ echo ${RED} "sudo apt update && sudo apt upgrade -y" ${Color_Off}
 sudo apt update && sudo apt upgrade -y
 
 echo ${RED} "Installing Basic Utilities" ${Color_Off}
-sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop
+sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke
 
 # Google Chrome
 echo ${RED} adding Google chrome

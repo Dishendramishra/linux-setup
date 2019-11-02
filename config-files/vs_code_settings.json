@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Monokai",
+    
+    "code-runner.executorMap": {
+        "python": "python",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
