@@ -1,21 +1,37 @@
-#### General
+### General
 
-1. Start applications in background
-    - ​Telegram: `/opt/telegram/Telegram -startintray`
+1. **Start applications in background**
+   
+    - Telegram: `/opt/telegram/Telegram -startintray`
+    
     - Google Chrome: `google-chrome-stable --no-startup-window`
+    
     - Xfdashboard: `xfdashboard -d`
+    
+      
+    
 
-2. Git Settings
-    - Proxy: `git config --global http.proxy http[s]://userName:password@proxyaddress:port`
+2. **Git Settings**
 
-3. Uninstall all modules installed by pip
+   - Proxy:
+
+     ```shell
+     git config --global http.proxy http[s]://userName:password@proxyaddress:port
+     ```
+
+     
+
+3. **Uninstall all modules installed by pip**
 
     ```shell
     pip freeze > dump.txt
     cat dump.txt | xargs sudo pip uninstall -y
     ```
 
-4. Softwares
+    
+
+4. **Softwares**
+
     - Libinput-Gestures
 
     ```shell
@@ -41,7 +57,7 @@
 
 #### XFCE
 
-1. Monokai Terminal  
+1. **Monokai Terminal**  
 
     ```shell
     sudo cp ./monokai-terminal/xfce-monokai.theme /usr/share/xfce4/terminal/colorschemes/
@@ -51,27 +67,27 @@
 
 #### GNOME
 
-1. Monokai Terminal
+1. **Monokai Terminal**
 
     ```shell
     sudo apt install -y dconf-cli uuid-runtime
     bash -c  "$(curl -sLo- https://git.io/vQgMr)"
     ```
 
-2. Enable hotcorners  
+2. **Enable hotcorners**  
 
     ```shell
     gsettings set org.gnome.shell enable-hot-corners true
     ```
 
-3. Isloate worksapce windows
+3. **Isolate workspace windows**
 
     ```shell
     gsettings set org.gnome.shell.app-switcher current-workspace-only true
     gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
     ```
 
-4. Default Font Settings
+4. **Default Font Settings**
 
     ```shell
     gsettings reset org.gnome.desktop.interface font-name
