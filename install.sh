@@ -1,6 +1,10 @@
 #!/bin/bash
 
 RED='\033[1;31m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+Color_Off="\033[0m"
+
 
 sudo apt update && sudo apt -y upgrade
 
@@ -31,18 +35,45 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 echo ${RED} adding Papirus Icon theme
 sudo add-apt-repository ppa:papirus/papirus
 
+# Albert
+echo ${RED} adding Albert 
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
+wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key -O Release.key
+sudo apt-key add - < Release.key
 
-echo ${RED} updating
+# Updating
+echo ${RED} sudo apt update ${Color_Off}
 sudo apt update
 
-echo ${RED} Installing softwares
+# ===============================================
+#  Installing Softwares
+# ===============================================
+
+echo ${RED}+----------------------+
+echo "| Installing softwares |"
+echo +----------------------+ ${Color_Off}
+
+echo ${GREEN} Google Chrome ${Color_Off}
 sudo apt install -y google-chrome-stable
+
+echo ${GREEN} Typora ${Color_Off}
 sudo apt install -y typora
+
+echo ${GREEN} VS Code ${Color_Off}
 sudo apt install -y code
+
+echo ${GREEN} Sublime Text ${Color_Off}
 sudo apt install -y sublime-text
+
+echo ${GREEN} Okular ${Color_Off}
 sudo apt install -y okular
+
+echo ${GREEN} Papirus Icon Theme ${Color_Off}
 sudo apt install -y papirus-icon-theme
 
+echo ${GREEN} Albert ${Color_Off}
+sudo apt install -y albert
+# ===============================================
 
 # Installing Oh-My-Zsh
 echo ${RED} Installing Oh-My-Zsh
