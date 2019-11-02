@@ -1,10 +1,34 @@
 {
+    "workbench.startupEditor": "none",
     "workbench.colorTheme": "Monokai",
-    
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#74a757",
+        // "editor.selectionHighlightBackground": "#74a757",
+        // "terminal.background" : "#2f2f30",
+    // "selection.background" : "#e0dd0769",
+    "terminal.border" :"#ffffff",
+    // "panel.background" :"#f3f1f1",
+    // "panel.border" :"#04f77d",
+    // "panel.dropBackground":"#04f77d",
+    // "panelTitle.activeBorder" :"#f75d03",
+    // "panelTitle.activeForeground" :"#f75d03",
+    // "panelInput.border" : "#04f77d",
+    // "textBlockQuote.background" :"#161616",
+    // "sideBar.background" :"#0c0500",
+    // "sideBar.foreground" :"#f75d03",
+    // "editor.background" :"#2f2f30",
+    // "editor.selectionHighlightBorder" : "#02026b",
+    // "editorBracketMatch.background": "#f80f07",
+    // "editorWidget.foreground" : "#1af507"
+    },
+    "editor.minimap.enabled": false,
+
     "code-runner.executorMap": {
-        "python": "python",
+        "python": "cd $dir && python $fileName",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt"
     },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+
+    "python.terminal.activateEnvironment": false,
+    "window.zoomLevel": -0.3,
+
 }

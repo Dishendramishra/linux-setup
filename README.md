@@ -10,7 +10,6 @@
     
       
     
-
 2. **Git Settings**
 
    - Proxy:
@@ -52,6 +51,11 @@
     sudo apt update
     sudo apt install r-base
     ```
+    
+5. **Config Files**
+
+    - ptipython: `cp ./config-files/ptipython_config.py ~/.ptpython/config.py`
+    - VS Code: `settings.json`
 
 ---
 
