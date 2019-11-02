@@ -5,9 +5,10 @@ BLUE='\033[1;34m'
 GREEN='\033[1;32m'
 Color_Off="\033[0m"
 
+echo ${RED} "sudo apt update && sudo apt upgrade -y" ${Color_Off}
+sudo apt update && sudo apt upgrade -y
 
-sudo apt update && sudo apt -y upgrade
-
+echo ${RED} "Installing Basic Utilities" ${Color_Off}
 sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop
 
 # Google Chrome
@@ -45,9 +46,9 @@ sudo apt-key add - < Release.key
 echo ${RED} sudo apt update ${Color_Off}
 sudo apt update
 
-# ===============================================
-#  Installing Softwares
-# ===============================================
+# =======================================================================
+#               Installing Softwares
+# =======================================================================
 
 echo ${RED}+----------------------+
 echo "| Installing softwares |"
@@ -73,9 +74,20 @@ sudo apt install -y papirus-icon-theme
 
 echo ${GREEN} Albert ${Color_Off}
 sudo apt install -y albert
-# ===============================================
+# =======================================================================
 
-# Installing Oh-My-Zsh
+
+# =======================================================================
+#               Installing Oh-My-Zsh
+# =======================================================================
 echo ${RED} Installing Oh-My-Zsh
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# adding plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# adding plugins in zshrc
+sed -i 's/plugins.*/plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
+# =======================================================================
