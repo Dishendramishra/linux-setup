@@ -64,8 +64,18 @@
 1. **Monokai Terminal**  
 
     ```shell
-    sudo cp ./monokai-terminal/xfce-monokai.theme /usr/share/xfce4/terminal/colorschemes/
+    sudo cp ./monokai-terminal/xfce-monokai.theme /usr/share/xfce4/terminal/colorschemes
     ```
+    
+2. **Mac Theme**
+
+    Prerequisites:
+
+    ``` shell
+    sudo apt install ocs-url
+    ```
+
+    theme-link: https://www.gnome-look.org/p/1241688/
 
 ---
 
