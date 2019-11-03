@@ -24,9 +24,11 @@
     "editor.minimap.enabled": false,
 
     "code-runner.runInTerminal": true,
+    "code-runner.customCommand": "exit",
     "code-runner.executorMap": {
         "python": "cd $dir && python $fileName",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "idl" : "idl",
     },
 
     "python.terminal.activateEnvironment": false,
