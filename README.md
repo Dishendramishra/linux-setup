@@ -75,7 +75,7 @@
     sudo apt install ocs-url
     ```
 
-    theme-link: https://www.gnome-look.org/p/1241688/
+    theme-link: https://www.gnome-look.org/p/1275087/
 
 ---
 
