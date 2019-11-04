@@ -57,6 +57,23 @@
     - ptipython: `cp ./config-files/ptipython_config.py ~/.ptpython/config.py`
     - VS Code: `settings.json`
 
+6. **Manually add PPA**
+   ```shell
+   sudo apt-add-repository '<ppa technical data>'
+   ```
+
+7. **Manually add PPA Signing Key**
+   ```shell
+   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 00000000
+   ```
+   Replacing the `00000000` with the second part of the key informed in the PPA website that you want to add.
+
+   For example, if you find this line:
+   ```shell
+    4096R/7BF576066
+   ```
+   Use only the second part (no matter its size), which in this example is `7BF576066`
+
 ---
 
 #### XFCE
