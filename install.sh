@@ -19,7 +19,7 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 # Typora
 echo -e ${RED} adding Typora ${Color_Off}
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-add-repository -y 'deb https://typora.io/linux ./'
 
 # VS Code
 echo -e ${RED} adding VS Code ${Color_Off}
@@ -34,7 +34,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 # Papirus Icon theme
 echo -e ${RED} adding Papirus Icon theme ${Color_Off}
-sudo add-apt-repository ppa:papirus/papirus
+sudo apt-add-repository -y ppa:papirus/papirus
 
 # Albert
 echo -e ${RED} adding Albert ${Color_Off}
