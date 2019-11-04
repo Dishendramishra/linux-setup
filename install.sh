@@ -9,7 +9,7 @@ echo -e ${RED} "sudo apt update && sudo apt upgrade -y" ${Color_Off}
 sudo apt update && sudo apt upgrade -y
 
 echo -e ${RED} "Installing Basic Utilities" ${Color_Off}
-sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool
+sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar unzip
 
 # Google Chrome
 echo -e ${RED} adding Google chrome ${Color_Off}
