@@ -52,6 +52,21 @@
     sudo apt install r-base
     ```
     
+    - Nemo
+      Change default terminal used by nemo
+      `org.cinnamon.desktop.applications.terminal.exec` to your choice
+    
+      Add open terminal here shortcut
+      ```shell
+      mkdir -p ~/.gnome2/accels
+      touch ~/.gnome2/accels/nemo
+      ```
+      
+      Then add the following line in that file (replace "F4" with whatever shortcut you want to use):
+      ```shell
+      (gtk_accel_path "<Actions>/DirViewActions/OpenInTerminal" "F4")
+      ```
+    
 5. **Config Files**
 
     - ptipython: `cp ./config-files/ptipython_config.py ~/.ptpython/config.py`
