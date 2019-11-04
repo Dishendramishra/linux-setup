@@ -43,7 +43,7 @@
     cd ..
     ```
 
-    - R Language
+    - R Language  
 
     ```shell
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
@@ -52,8 +52,8 @@
     sudo apt install r-base
     ```
     
-    - Nemo
-      Change default terminal used by nemo
+    - Nemo  
+      Change default terminal used by nemo  
       `org.cinnamon.desktop.applications.terminal.exec` to your choice
     
       Add open terminal here shortcut
