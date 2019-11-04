@@ -75,7 +75,8 @@
     sudo apt install ocs-url
     ```
 
-    theme-link: https://www.gnome-look.org/p/1275087/
+    window-manager theme (install Mojave-dark.tar.xz): https://www.gnome-look.org/p/1275087/
+    icon-theme (install Cupertino-KDE.tar.xz): https://www.xfce-look.org/p/1102582/
 
 ---
 
