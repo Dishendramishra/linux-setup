@@ -24,11 +24,19 @@ exit
 #               Adding proxy_on proxy_off functions
 # =======================================================================
 
-echo 'proxy_on(){' >> ~/.bashrc ~/.zshrc
-echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc ~/.zshrc
-echo '}' >> ~/.bashrc ~/.zshrc
+echo 'proxy_on(){' >> ~/.bashrc
+echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
+echo '}' >> ~/.bashrc
 
-echo 'proxy_off(){' >> ~/.bashrc ~/.zshrc
-echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc ~/.zshrc
-echo '}' >> ~/.bashr ~/.zshrcc
+echo 'proxy_on(){' >> ~/.zshrc
+echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
+echo '}' >> ~/.zshrc
+
+echo 'proxy_off(){' >> ~/.bashrc
+echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
+echo '}' >> ~/.bashrc
+
+echo 'proxy_off(){' >> ~/.zshrc
+echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
+echo '}' >> ~/.zshrcc
 # =======================================================================
