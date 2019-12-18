@@ -143,3 +143,7 @@
     gsettings reset org.gnome.nautilus.desktop font
     gsettings reset org.gnome.desktop.interface text-scaling-factor
     ```
+    
+## Gmail Filters
+`{from:zomato ,from:swiggy, from:phonepe, from:paytm, slack, from:coursera, from:academia, from:decathlon, from:triaba, from:twitter, from:quora, from:notification, from:google, from:apple, from:amazon, from:mi, from:redhat,
+from:redbus, from:codechef, from:teacheron, from:urbanpro, from:coinbase, from:vistara,from:github, from:ola, from:flipkart, from:prime minister,from:hackveda}`
