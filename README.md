@@ -66,6 +66,8 @@
       ```shell
       (gtk_accel_path "<Actions>/DirViewActions/OpenInTerminal" "F4")
       ```
+    - Python
+      pip install pandas jupyter matplotlib scipy astropy ptipython 
     
 5. **Config Files**
 
