@@ -68,6 +68,7 @@
       ```
     - Python
       ```shell
+      pip install setuptools
       pip install pandas jupyter matplotlib scipy astropy ptipython
       ```
     
