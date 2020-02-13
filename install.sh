@@ -75,6 +75,11 @@ sudo apt install -y papirus-icon-theme
 
 echo -e ${GREEN} Albert ${Color_Off}
 sudo apt install -y albert
+
+echo -e ${GREEN} Free-Office ${Color_Off}
+wget https://www.softmaker.net/down/softmaker-freeoffice-2018_973-01_amd64.deb
+sudo dpkg -i ./softmaker-freeoffice-2018_973-01_amd64.deb
+sudo /usr/share/freeoffice2018/add_apt_repo.sh
 # =======================================================================
 
 
