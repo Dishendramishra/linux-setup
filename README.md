@@ -72,8 +72,39 @@
       pip install pandas jupyter matplotlib scipy astropy ptipython
       ```
     - IDL  
-      lib = https://pkgs.org/download/libxp6 install library from here
-    
+      Dependencies: libxp6 https://pkgs.org/download/libxp6  
+      You can download and install dependencies manually from link above.  
+      OR  
+      Execute following commands  
+      ```shell
+      wget http://ftp.br.debian.org/debian/pool/main/libx/libxp/libxp6_1.0.2-2_amd64.deb
+      sudo dpkg -i ./libxp6_1.0.2-2_amd64.deb
+      ```
+      
+      Installing IDL  
+      ```shell
+      sudo mkdir /usr/local/itt
+      sudo tar -xvf idl71_linux_x86.tar.gz --directory /usr/local/itt/
+      cd /usr/local/itt
+      sudo /usr/local/itt/install
+      ```
+      
+      libraries: install coyote and astron  
+      Installing idl libraries
+      ```shell
+      cd ~
+      sudo mv /usr/local/itt/license.dat /usr/local/itt/license/
+      wget https://idlastro.gsfc.nasa.gov/ftp/coyote_astron.tar.gz
+      wget https://idlastro.gsfc.nasa.gov/ftp/astron.zip
+      mkdir astron
+      tar -xvf coyote_astron.tar.gz 
+      tar -xvf astron.zip -C ./astron
+      sudo mv ./astron /usr/local/itt/idl/lib/
+      sudo mv ./pro/coyote /usr/local/itt/idl/lib/
+      rm -rf ./pro
+      ```
+      
+      
 5. **Config Files**
 
     - ptipython: `cp ./config-files/ptipython_config.py ~/.ptpython/config.py`
