@@ -71,6 +71,8 @@
       pip install setuptools
       pip install pandas jupyter matplotlib scipy astropy ptipython
       ```
+    - IDL  
+      lib = https://pkgs.org/download/libxp6 install library from here
     
 5. **Config Files**
 
