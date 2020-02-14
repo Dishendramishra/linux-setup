@@ -98,8 +98,8 @@
       wget https://idlastro.gsfc.nasa.gov/ftp/coyote_astron.tar.gz
       wget https://idlastro.gsfc.nasa.gov/ftp/astron.zip
       mkdir astron
-      tar -xvf coyote_astron.tar.gz 
-      tar -xvf astron.zip -C ./astron
+      unzip ./astron.zip -d ./astron
+      tar -xvf coyote_astron.tar.gz
       sudo mv ./astron /usr/local/itt/idl/lib/
       sudo mv ./pro/coyote /usr/local/itt/idl/lib/
       rm -rf ./pro
