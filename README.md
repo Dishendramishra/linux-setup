@@ -117,9 +117,9 @@
 
 7. **Manually add PPA Signing Key**
    ```shell
-   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 00000000
+   curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x<key>' | sudo apt-key add -
    ```
-   Replacing the `00000000` with the second part of the key informed in the PPA website that you want to add.
+   Replacing the `<key>` with the second part of the key informed in the PPA website that you want to add.
 
    For example, if you find this line:
    ```shell
