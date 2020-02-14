@@ -72,6 +72,7 @@
       pip install pandas jupyter matplotlib scipy astropy ptipython
       ```
     - IDL  
+      https://drive.google.com/open?id=1YAfoQlK1ZfFAFDIVk7mMWY5wXBkHc8lw  
       Dependencies: libxp6 https://pkgs.org/download/libxp6  
       You can download and install dependencies manually from link above.  
       OR  
