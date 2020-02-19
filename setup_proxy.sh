@@ -14,6 +14,7 @@ if [ $EUID != 0 ]; then
 fi
 # =======================================================================
 
+
 # =======================================================================
 #               Adding Commented Proxy
 # =======================================================================
@@ -21,13 +22,25 @@ fi
 echo -e ${GREEN}  Adding Commented Proxy to apt and /etc/environment ${Color_Off}
 # echo -e '+----------------------------------------------------+' ${Color_Off}
 
+$USER
+$PASSWD
+
+echo Enter proxy username:
+read USER
+echo
+
+echo Enter proxy password:
+read PASSWD
+
 sudo echo '' >> /etc/environment
-sudo echo '#http_proxy="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
-sudo echo '#https_proxy="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
-sudo echo '#ftp_proxy="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
-sudo echo '#HTTP_PROXY="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
-sudo echo '#HTTPS_PROXY="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
-sudo echo '#FTP_PROXY="http://user:passwd@172.16.0.1:3128/"' >> /etc/environment
+sudo echo '#http_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+sudo echo '#https_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+sudo echo '#ftp_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+
+sudo echo '#HTTP_PROXY="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+sudo echo '#HTTPS_PROXY="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+sudo echo '#FTP_PROXY="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/environment
+
 sudo echo '#no_proxy=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 sudo echo '#NO_PROXY=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 
@@ -65,3 +78,5 @@ echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.
 echo '}' >> ~/.zshrc
 echo -e ${BLUE} Done
 # =======================================================================
+
+echo -e ${RED} reboot system to apply proxy settings ! ${Color_Off}
