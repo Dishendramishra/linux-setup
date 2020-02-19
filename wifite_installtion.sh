@@ -12,7 +12,7 @@ echo -e ${RED}+----------------------+
 echo "| Installing softwares |"
 echo -e '+----------------------+' ${Color_Off}
 
-apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev
+sudo apt install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev
 
 echo -e ${GREEN} tshark ${Color_Off}
 #tshark
