@@ -71,6 +71,6 @@ git clone https://github.com/derv82/wifite2
 cd ./wifite2
 sudo python3 setup.py install
 
-echo -e ${BLUE} Installation Completed! :) ${Color_Off}
+echo -e ${BLUE} 'Installation Completed! :)' ${Color_Off}
 cd
 
