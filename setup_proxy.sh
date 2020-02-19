@@ -23,7 +23,7 @@ exit
 # =======================================================================
 #               Adding proxy_on proxy_off functions
 # =======================================================================
-
+echo '\n' >> ~/.bashrc
 echo 'proxy_on(){' >> ~/.bashrc
 echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
 echo '}' >> ~/.bashrc
