@@ -38,5 +38,5 @@ echo '}' >> ~/.bashrc
 
 echo 'proxy_off(){' >> ~/.zshrc
 echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
-echo '}' >> ~/.zshrcc
+echo '}' >> ~/.zshrc
 # =======================================================================
