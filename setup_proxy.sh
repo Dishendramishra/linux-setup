@@ -45,9 +45,9 @@ sudo echo '#no_proxy=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 sudo echo '#NO_PROXY=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 
 sudo echo '' >> /etc/apt/apt.conf.d/proxy.conf
-sudo echo '#Acquire::http::proxy "http://user:passwd@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
-sudo echo '#Acquire::https::proxy "http://user:passwd@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
-sudo echo '#Acquire::ftp::proxy "http://user:passwd@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
+sudo echo '#Acquire::http::proxy "http://'${USER}':'${PASSWD}'@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
+sudo echo '#Acquire::http::proxy "http://'${USER}':'${PASSWD}'@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
+sudo echo '#Acquire::http::proxy "http://'${USER}':'${PASSWD}'@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
 echo -e ${BLUE} Done
 echo
 # =======================================================================
