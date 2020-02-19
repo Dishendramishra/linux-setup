@@ -12,7 +12,25 @@ echo -e ${RED}+----------------------+
 echo "| Installing softwares |"
 echo -e '+----------------------+' ${Color_Off}
 
-sudo apt install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev
+sudo apt install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev libtool p7zip-full
+
+echo -e ${GREEN} aircrack-ng ${Color_Off}
+git clone https://github.com/aircrack-ng/aircrack-ng
+cd aircrack-ng
+autoreconf -i
+./configure --with-experimental
+make
+sudo make install
+sudo ldconfig
+cd ~/wifite
+
+echo -e ${GREEN} hashcat ${Color_Off}
+wget https://hashcat.net/files/hashcat-5.1.0.7z
+mkdir hashcat
+7z e ./hashcat-5.1.0.7z -o./hashcat
+cd ./hashcat
+sudo cp ./hashcat64.bin /usr/local/bin/hashcat
+cd ~/wifite
 
 echo -e ${GREEN} tshark ${Color_Off}
 #tshark
