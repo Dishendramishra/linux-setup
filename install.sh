@@ -9,7 +9,30 @@ echo -e ${RED} "sudo apt update && sudo apt upgrade -y" ${Color_Off}
 sudo apt update && sudo apt upgrade -y
 
 echo -e ${RED} "Installing Basic Utilities" ${Color_Off}
-sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar unzip
+sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar unzip xdotool python3-dev python3-pip gnome-tweak-tool chrome-gnome-shell dconf-editor
+
+# installing some important python modules
+echo -e ${GREEN} Installing some important python modules ${Color_Off}
+pip3 install wheel
+pip3 install setuptools
+pip3 install jedi==0.14.1
+
+pip3 install scipy
+pip3 install astropy
+pip3 install matplotlib
+pip3 install pandas
+pip3 install julian
+
+pip3 install bs4
+pip3 install termcolor
+pip3 install colorama
+pip3 install requests
+
+pip3 install jupyter
+pip3 install notebook
+pip3 install ptipython
+pip3 install spyder
+
 
 # Google Chrome
 echo -e ${RED} adding Google chrome ${Color_Off}
