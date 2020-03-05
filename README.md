@@ -186,6 +186,11 @@
 ```shell
 sudo wget /usr/share/icons/google-drive -O https://seeklogo.com/images/G/google-drive-logo-C66555C645-seeklogo.com.png
 ```
+## Clear terminal
+```shell
+echo "\n" >> ~/.bashrc
+echo "alias cc=\"clear && printf '\e[3J'\"" >>  ~/.bashrc
+```
 
 ## Gmail Filters
 `{from:zomato ,from:swiggy, from:phonepe, from:paytm, slack, from:coursera, from:academia, from:decathlon, from:triaba, from:twitter, from:quora, from:notification, from:google, from:apple, from:amazon, from:mi, from:redhat,
