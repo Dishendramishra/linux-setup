@@ -195,3 +195,14 @@ echo "alias cc=\"clear && printf '\e[3J'\"" >>  ~/.bashrc
 ## Gmail Filters
 `{from:zomato ,from:swiggy, from:phonepe, from:paytm, slack, from:coursera, from:academia, from:decathlon, from:triaba, from:twitter, from:quora, from:notification, from:google, from:apple, from:amazon, from:mi, from:redhat,
 from:redbus, from:codechef, from:teacheron, from:urbanpro, from:coinbase, from:vistara,from:github, from:ola, from:flipkart, from:prime minister,from:hackveda,from:linkedin, from:instructables, from:aliexpress, from:netgear,from:adobe}`
+
+## Linux Mint Animation Speeds
+
+
+```shell
+sudo subl /usr/share/cinnamon/js/ui/expo.js
+sudo subl /usr/share/cinnamon/js/ui/overview.js
+```
+edit the const **ANIMATION_TIME** to 0.15
+
+you will need to restart!
