@@ -59,9 +59,15 @@ echo
 # echo -e ${GREEN}'+-------------------------------------------+'
 echo -e ${GREEN}   Adding proxy_on proxy_off to bashrc zshrc ${Color_Off}
 # echo -e '+-------------------------------------------+' ${Color_Off}
+
 echo '' >> ~/.bashrc
 echo 'proxy_on(){' >> ~/.bashrc
 echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
+echo '}' >> ~/.bashrc
+
+echo '' >> ~/.bashrc
+echo 'proxy_off(){' >> ~/.bashrc
+echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
 echo '}' >> ~/.bashrc
 
 echo '' >> ~/.zshrc
@@ -69,13 +75,11 @@ echo 'proxy_on(){' >> ~/.zshrc
 echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
 echo '}' >> ~/.zshrc
 
-echo 'proxy_off(){' >> ~/.bashrc
-echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
-echo '}' >> ~/.bashrc
-
+echo '' >> ~/.bashrc
 echo 'proxy_off(){' >> ~/.zshrc
 echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
 echo '}' >> ~/.zshrc
+
 echo -e ${BLUE} Done
 # =======================================================================
 
