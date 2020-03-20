@@ -26,6 +26,12 @@
     pip freeze > dump.txt
     cat dump.txt | xargs sudo pip uninstall -y
     ```
+    
+    On Windows rmeove all cached modules
+    ```shell
+    cd %USERPROFILE%\AppData\Local\pip
+    del /f /s /q cache > NUL
+    ```
 
     
 
