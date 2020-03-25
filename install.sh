@@ -6,10 +6,12 @@ GREEN='\033[1;32m'
 Color_Off="\033[0m"
 
 echo -e ${RED} "sudo apt update && sudo apt upgrade -y" ${Color_Off}
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
 sudo apt update && sudo apt upgrade -y
 
 echo -e ${RED} "Installing Basic Utilities" ${Color_Off}
-sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar unzip xdotool python3-dev python3-pip gnome-tweak-tool chrome-gnome-shell dconf-editor
+sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar-free unzip xdotool python3-dev python3-pip gnome-tweak-tool chrome-gnome-shell dconf-editor
 
 # installing some important python modules
 echo -e ${GREEN} Installing some important python modules ${Color_Off}
@@ -112,7 +114,7 @@ sudo /usr/share/freeoffice2018/add_apt_repo.sh
 echo -e ${RED} Installing Oh-My-Zsh ${Color_Off}
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-exit
+
 # adding plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
