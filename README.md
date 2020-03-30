@@ -212,3 +212,23 @@ sudo subl /usr/share/cinnamon/js/ui/overview.js
 edit the const **ANIMATION_TIME** to 0.15
 
 you will need to restart!
+
+## youtube-dl
+Download songs playlist from youtube in mp3
+```shell
+youtube-dl -f bestaudio -i -x --audio-format mp3 --embed-thumbnail --add-metadata -o '%(title)s.%(ext)s' --restrict-filenames PLh4Eme5gACZE-KpXJDc4zzfBChblsFA34
+```  
+Download video playlist from youtube
+
+```shell
+youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(title)s.%(ext)s' --restrict-filenames PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL
+
+```  
+if you want to change format of video, include `--recode-video mp4` flag in above command.  
+
+Download platlist in bestquality keeping the audio+video downloaded separately and moving converted output to a different location.
+```shell
+mkdir output
+cd ouput
+youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(title)s.%(ext)s' --restrict-filenames --recode-video mp4 --exec 'mv {} ./output/{}' PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL
+```
