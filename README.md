@@ -232,3 +232,38 @@ mkdir output
 cd ouput
 youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(title)s.%(ext)s' --restrict-filenames --recode-video mp4 --exec 'mv {} ./output/{}' PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL
 ```
+
+## Google drive
+Install grive2 https://github.com/vitalif/grive2. 
+
+### Creating secret id and code
+Go to https://console.developers.google.com/apis/credentials  
+Click **Create Credential** from top bar and create a **OAuth Client ID** as shown in images below:
+![1](https://i.imgur.com/eIHfpU3.png)
+![2](https://i.imgur.com/amLrXuD.png)
+
+### Setup
+```shell
+mkdir ~/google-drive
+cd  ~/google-drive
+```
+
+Full Sync
+```shell
+grive -a --id <secret-id> --secret <secret-code>
+```
+
+Partial Sync
+```shell
+grive -a -s <dir-name> --id <secret-id> --secret <secret-code>
+```
+
+### Script for syncing
+You can create a script like below and use it for syncing. 
+```shell
+#!/bin/bash
+
+cd ~/google-drive
+grive -a -P
+read -p "Press enter to continue"
+```
