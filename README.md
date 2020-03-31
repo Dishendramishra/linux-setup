@@ -239,8 +239,8 @@ Install grive2 https://github.com/vitalif/grive2.
 ### Creating secret id and code
 Go to https://console.developers.google.com/apis/credentials  
 Click **Create Credential** from top bar and create a **OAuth Client ID** as shown in images below:
-![1](https://i.imgur.com/eIHfpU3.png)
-![2](https://i.imgur.com/amLrXuD.png)
+<kbd>![1](https://i.imgur.com/eIHfpU3.png)</kbd>
+<kbd>![2](https://i.imgur.com/amLrXuD.png)</kbd>
 
 ### Setup
 ```shell
