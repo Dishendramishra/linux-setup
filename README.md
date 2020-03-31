@@ -263,7 +263,22 @@ You can create a script like below and use it for syncing.
 ```shell
 #!/bin/bash
 
+RED='\033[1;31m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+Color_Off="\033[0m"
+
+echo -e ${RED} Starting Sync ${Color_Off}
+
+echo -e ${BLUE}
 cd ~/google-drive
-grive -a -P
+grive -a
+echo -e ${Color_Off}
+
+echo -e ${GREEN} Sync Completed ${Color_Off}
 read -p "Press enter to continue"
+
 ```
+
+snapshot of script   
+![1](https://i.imgur.com/vEd89NR.png)
