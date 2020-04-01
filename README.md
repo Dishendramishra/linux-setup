@@ -250,12 +250,12 @@ cd  ~/google-drive
 
 Full Sync
 ```shell
-grive -a --id <secret-id> --secret <secret-code>
+grive -a --id "<secret-id>" --secret "<secret-code>"
 ```
 
 Partial Sync
 ```shell
-grive -a -s <dir-name> --id <secret-id> --secret <secret-code>
+grive -a -s <dir-name> --id "<secret-id>" --secret "<secret-code>"
 ```
 
 ### Script for syncing
