@@ -90,10 +90,13 @@
       
       Installing IDL  
       ```shell
+      wget http://lifeng.lamost.org/courses/IDL/software/idl71linux.x86.tar.gz
+      wget http://lifeng.lamost.org/courses/IDL/software/license.dat
       sudo mkdir /usr/local/itt
-      sudo tar -xvf idl71_linux_x86.tar.gz --directory /usr/local/itt/
+      sudo tar -xvf idl71linux.x86.tar.gz --directory /usr/local/itt/
       cd /usr/local/itt
       sudo /usr/local/itt/install
+      sudo mv ./license.dat /usr/local/itt/license/
       ```
       
       libraries: install coyote and astron  
