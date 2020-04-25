@@ -74,8 +74,25 @@
       ```
     - Python
       ```shell
+      pip install wheel
       pip install setuptools
-      pip install pandas jupyter matplotlib scipy astropy ptipython
+      pip install jedi==0.14.1
+
+      pip install scipy
+      pip install astropy
+      pip install matplotlib
+      pip install pandas
+      pip install julian
+
+      pip install bs4
+      pip install termcolor
+      pip install colorama
+      pip install requests
+
+      pip install jupyter
+      pip install notebook
+      pip install ptipython
+      pip install spyder
       ```
     - IDL  
       http://lifeng.lamost.org/courses/IDL/    
@@ -90,9 +107,10 @@
       
       Installing IDL  
       ```shell
+      cd
       wget http://lifeng.lamost.org/courses/IDL/software/idl71linux.x86.tar.gz
       wget http://lifeng.lamost.org/courses/IDL/software/license.dat
-      sudo mkdir /usr/local/itt
+      sudo mkdir /usr/local/itt      
       sudo tar -xvf idl71linux.x86.tar.gz --directory /usr/local/itt/
       cd /usr/local/itt
       sudo /usr/local/itt/install
