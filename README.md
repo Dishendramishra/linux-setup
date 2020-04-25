@@ -84,8 +84,8 @@
       OR  
       Execute following commands  
       ```shell
-      wget http://ftp.br.debian.org/debian/pool/main/libx/libxp/libxp6_1.0.2-2_amd64.deb
-      sudo dpkg -i ./libxp6_1.0.2-2_amd64.deb
+      sudo apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update
+      sudo apt -o APT::Get::AllowUnauthenticated=true install libxp6
       ```
       
       Installing IDL  
@@ -96,6 +96,7 @@
       sudo tar -xvf idl71linux.x86.tar.gz --directory /usr/local/itt/
       cd /usr/local/itt
       sudo /usr/local/itt/install
+      cd
       sudo mv ./license.dat /usr/local/itt/license/
       ```
       
@@ -103,7 +104,6 @@
       Installing idl libraries
       ```shell
       cd ~
-      sudo mv /usr/local/itt/license.dat /usr/local/itt/license/
       wget https://idlastro.gsfc.nasa.gov/ftp/coyote_astron.tar.gz
       wget https://idlastro.gsfc.nasa.gov/ftp/astron.zip
       mkdir astron
@@ -193,8 +193,7 @@
     ```
 ## Icons
 ```shell
-sudo wget /usr/share/icons/google-drive -O https://seeklogo.com/images/G/google-drive-logo-C66555C645-seeklogo.com.png
-```
+sudo wget https://seeklogo.com/images/G/google-drive-logo-C66555C645-seeklogo.com.png -P /usr/share/icons/google-drive```
 ## Clear terminal
 ```shell
 echo "\n" >> ~/.bashrc
