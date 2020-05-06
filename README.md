@@ -155,6 +155,19 @@
    ```
    Use only the second part (no matter its size), which in this example is `7BF576066`
 
+8. **Desktop Entry**
+   ```shell
+   [Desktop Entry]
+   Version=0.1
+   Type=Application
+   Name=HelloWorld
+   Comment=A simple Hello Word
+   Exec=python /opt/hello.py
+   Icon=/opt/icon.png
+   Path=
+   Terminal=false
+   StartupNotify=false
+   ```
 ---
 
 #### XFCE
