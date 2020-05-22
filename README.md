@@ -4,7 +4,7 @@
 
 2. [XFCE](#XFCE)
 3. [Gnome](#Gnome)
-4. [Linux Mint Animation Speeds](#Linu- Mint-Animation-Speeds)
+4. [Linux Mint Animation Speeds](#Linux-Mint-Animation-Speeds)
 5. [Icons](#Icons)
 6. [Terminal Customizations](#Terminal-Customizations)
 7. [Gmail Filters](#Gmail-Filters)
