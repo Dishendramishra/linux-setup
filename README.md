@@ -1,4 +1,19 @@
-### General
+# Index:
+
+1. [Genral](#Genera;)
+
+2. [XFCE](#XFCE)
+3. [Gnome](#Gnome)
+4. [Linux Mint Animation Speeds](#Linu- Mint-Animation-Speeds)
+5. [Icons](#Icons)
+6. [Terminal Customizations](#Terminal-Customizations)
+7. [Gmail Filters](#Gmail-Filters)
+8. [youtube-dl](#youtube-dl)
+9. [Google drive](#Google-drive)
+
+<br>
+
+## General
 
 1. **Start applications in background**
    
@@ -132,7 +147,7 @@
       rm -rf ./pro
       ```
       
-      
+    
 5. **Config Files**
 
     - ptipython: `cp ./config-files/ptipython_config.py ~/.ptpython/config.py`
@@ -170,7 +185,9 @@
    ```
 ---
 
-#### XFCE
+<br>
+
+## XFCE
 
 1. **Monokai Terminal**  
 
@@ -190,7 +207,9 @@
 
 ---
 
-#### GNOME
+<br>
+
+## GNOME
 
 1. **Monokai Terminal**
 
@@ -222,18 +241,8 @@
     gsettings reset org.gnome.nautilus.desktop font
     gsettings reset org.gnome.desktop.interface text-scaling-factor
     ```
-## Icons
-```shell
-sudo wget https://seeklogo.com/images/G/google-drive-logo-C66555C645-seeklogo.com.png -P /usr/share/icons/google-drive```
-## Clear terminal
-```shell
-echo "\n" >> ~/.bashrc
-echo "alias cc=\"clear && printf '\e[3J'\"" >>  ~/.bashrc
-```
 
-## Gmail Filters
-`{from:zomato ,from:swiggy, from:phonepe, from:paytm, slack, from:coursera, from:academia, from:decathlon, from:triaba, from:twitter, from:quora, from:notification, from:google, from:apple, from:amazon, from:mi, from:redhat,
-from:redbus, from:codechef, from:teacheron, from:urbanpro, from:coinbase, from:vistara,from:github, from:ola, from:flipkart, from:prime minister,from:hackveda,from:linkedin, from:instructables, from:aliexpress, from:netgear,from:adobe}`
+<br>
 
 ## Linux Mint Animation Speeds
 
@@ -242,21 +251,63 @@ from:redbus, from:codechef, from:teacheron, from:urbanpro, from:coinbase, from:v
 sudo subl /usr/share/cinnamon/js/ui/expo.js
 sudo subl /usr/share/cinnamon/js/ui/overview.js
 ```
+
 edit the const **ANIMATION_TIME** to 0.15
 
 you will need to restart!
+
+<br>
+
+## Icons
+
+```shell
+sudo wget https://seeklogo.com/images/G/google-drive-logo-C66555C645-seeklogo.com.png -P /usr/share/icons/google-drive
+```
+
+<br>
+
+## Terminal Customizations
+
+* Clear terminal
+
+  ```shell
+  echo "\n" >> ~/.bashrc
+  echo "alias cc=\"clear && printf '\e[3J'\"" >>  ~/.bashrc
+  ```
+
+* Oh-My- Zsh auto-cd turn off
+
+  ```shell
+  unsetopt autocd
+  ```
+
+* Terminal hide Cursor
+
+  ```shell
+  tput civis #hide 
+  tput norm  #unhide
+  ```
+
+<br>
+
+## Gmail Filters
+
+`{from:zomato ,from:swiggy, from:phonepe, from:paytm, slack, from:coursera, from:academia, from:decathlon, from:triaba, from:twitter, from:quora, from:notification, from:google, from:apple, from:amazon, from:mi, from:redhat,
+from:redbus, from:codechef, from:teacheron, from:urbanpro, from:coinbase, from:vistara,from:github, from:ola, from:flipkart, from:prime minister,from:hackveda,from:linkedin, from:instructables, from:aliexpress, from:netgear,from:adobe}`
+
+<br>
 
 ## youtube-dl
 Download songs playlist from youtube in mp3
 ```shell
 youtube-dl -f bestaudio -i -x --audio-format mp3 --embed-thumbnail --add-metadata -o '%(title)s.%(ext)s' --restrict-filenames PLh4Eme5gACZE-KpXJDc4zzfBChblsFA34
-```  
+```
 Download video playlist from youtube
 
 ```shell
 youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(title)s.%(ext)s' --restrict-filenames PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL
 
-```  
+```
 if you want to change format of video, include `--recode-video mp4` flag in above command.  
 
 Download platlist in bestquality keeping the audio+video downloaded separately and moving converted output to a different location.
@@ -266,14 +317,25 @@ cd ouput
 youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(title)s.%(ext)s' --restrict-filenames --recode-video mp4 --exec 'mv {} ./output/{}' PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL
 ```
 
+<br>
+
 ## Google drive
+
+1. [Enable Google Drive API](#1.-Enable-Google-Drive-API)
+
+2. [Creating secret id and code](#2.-Creating-secret-id-and-code)
+
+3. [Setup](#3.-Setup)
+
+<br>
+
 Install grive2 https://github.com/vitalif/grive2. 
 
 ### 1. Enable Google Drive API
 Go to https://console.developers.google.com/apis/library/drive.googleapis.com  
 Click **ENABLE** button
 <kbd>![1](https://i.imgur.com/v8xvEso.jpg)</kbd>
- 
+
 ### 2. Creating secret id and code
 Go to https://console.developers.google.com/apis/credentials  
 Click **Create Credential** from top bar and create a **OAuth Client ID** as shown in images below:
