@@ -10,7 +10,7 @@ sudo add-apt-repository universe
 sudo apt update && sudo apt upgrade -y
 
 echo -e ${RED} "Installing Basic Utilities" ${Color_Off}
-sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar-free unzip xdotool dconf-editor
+sudo apt  install -y git curl wget gparted apt-transport-https build-essential vlc htop easystroke intltool unrar-free unzip xdotool dconf-editor gdebi
 
 # Google Chrome
 echo -e ${RED} adding Google chrome ${Color_Off}
@@ -73,6 +73,10 @@ sudo apt install -y albert
 
 echo -e ${GREEN} Telegram ${Color_Off}
 sudo apt install -y Telegram
+
+echo -e ${GREEN} ocs-url ${Color_Off}
+wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1MzA3NzQ2MDAiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6IjM1MWI5OGQxZTc2YTgxMTdhZjUwODM2YWIzNjgyMmU1YjFmYjg0MTJlYmEzYTM3Yjk5ODFmMmZhZGUxMGU4Zjk2NTA3ZWFlODRmZDM5ZjEzM2MwMTk5NTVkYTU1ZTIxNTA0ZWIxMGQ1ZjYzMDQ5NTkyYmVlNDNjMTAxMGJhZWRiIiwidCI6MTU5MDkxODU3Niwic3RmcCI6IjU1ZTg3MWYzZTEwMGYyNjQ4MDEwYzk3ZTlmN2EzNTQ5Iiwic3RpcCI6IjEwMy44NS44LjI0In0.M-5J-8-K8FHfnkY41ZU5Jc86d-EsHb2KduOk5B1WDDM/ocs-url_3.1.0-0ubuntu1_amd64.deb"
+echo "y" | sudo gdebi ./ocs-url*.deb
 # =======================================================================
 
 
