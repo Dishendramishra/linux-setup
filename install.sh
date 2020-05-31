@@ -40,6 +40,10 @@ sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschn
 wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key -O Release.key
 sudo apt-key add - < Release.key
 
+# Telegram
+echo -e ${RED} adding Telegram ${Color_Off}
+sudo add-apt-repository ppa:atareao/telegram
+
 # Updating
 echo -e ${RED} sudo apt update ${Color_Off}
 sudo apt update
@@ -66,6 +70,9 @@ sudo apt install -y sublime-text
 
 echo -e ${GREEN} Albert ${Color_Off}
 sudo apt install -y albert
+
+echo -e ${GREEN} Telegram ${Color_Off}
+sudo apt install -y Telegram
 # =======================================================================
 
 
