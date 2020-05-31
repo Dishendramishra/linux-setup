@@ -1,0 +1,8 @@
+numpy
+scipy
+astropy
+pandas
+matplotlib
+jupyter
+spyder
+ptipython
