@@ -116,8 +116,9 @@
       OR  
       Execute following commands  
       ```shell
-      sudo apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update
-      sudo apt -o APT::Get::AllowUnauthenticated=true install libxp6
+      sudo add-apt-repository ppa:zeehio/libxp
+      sudo apt-get update
+      sudo apt-get install libxp6
       ```
       
       Installing IDL  
