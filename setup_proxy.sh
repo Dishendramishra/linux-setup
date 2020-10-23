@@ -44,6 +44,11 @@ sudo echo '#FTP_PROXY="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> /etc/e
 sudo echo '#no_proxy=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 sudo echo '#NO_PROXY=localhost,127.0.0.1,*.my.lan.domain' >> /etc/environment
 
+echo '' >> ~/.bashrc
+sudo echo '#http_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> ~/.bashrc
+sudo echo '#https_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> ~/.bashrc
+sudo echo '#ftp_proxy="http://'${USER}':'${PASSWD}'@172.16.0.1:3128/"' >> ~/.bashrc
+
 sudo echo '' >> /etc/apt/apt.conf.d/proxy.conf
 sudo echo '#Acquire::http::proxy "http://'${USER}':'${PASSWD}'@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
 sudo echo '#Acquire::http::proxy "http://'${USER}':'${PASSWD}'@172.16.0.1:3128";' >> /etc/apt/apt.conf.d/proxy.conf
@@ -70,15 +75,15 @@ echo 'proxy_off(){' >> ~/.bashrc
 echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.bashrc
 echo '}' >> ~/.bashrc
 
-echo '' >> ~/.zshrc
-echo 'proxy_on(){' >> ~/.zshrc
-echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
-echo '}' >> ~/.zshrc
+# echo '' >> ~/.zshrc
+# echo 'proxy_on(){' >> ~/.zshrc
+# echo "	sudo sed -e '/h/ s/^#*//' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
+# echo '}' >> ~/.zshrc
 
-echo '' >> ~/.bashrc
-echo 'proxy_off(){' >> ~/.zshrc
-echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
-echo '}' >> ~/.zshrc
+# echo '' >> ~/.zshrc
+# echo 'proxy_off(){' >> ~/.zshrc
+# echo "	sudo sed -e '/h/ s/^#*/#/' -i /etc/environment /etc/apt/apt.conf.d/proxy.conf" >> ~/.zshrc
+# echo '}' >> ~/.zshrc
 
 echo -e ${BLUE} Done
 # =======================================================================
