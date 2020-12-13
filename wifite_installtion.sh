@@ -82,8 +82,14 @@ cd hcxdumptool
 make
 sudo make install
 cd ~/wifite
+echo -e ${GREEN} Hcxpcaptool ${Color_Off}
+git clone https://github.com/warecrer/Hcxpcaptool
+cd ./Hcxpcaptool
+make
+sudo make install
+cd ~/wifite
 
-echo -e ${GREEN} hcxdumptool ${Color_Off}
+echo -e ${GREEN} Wifite2 ${Color_Off}
 # wifite2
 git clone https://github.com/derv82/wifite2
 cd ./wifite2
@@ -91,4 +97,3 @@ sudo python3 setup.py install
 
 echo -e ${BLUE} 'Installation Completed! :)' ${Color_Off}
 cd
-
