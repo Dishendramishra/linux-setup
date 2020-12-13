@@ -12,7 +12,7 @@ echo -e ${RED}+----------------------+
 echo "| Installing softwares |"
 echo -e '+----------------------+' ${Color_Off}
 
-sudo apt install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev libtool p7zip-full
+sudo apt install -y libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev libtool p7zip-full
 
 echo -e ${GREEN} aircrack-ng ${Color_Off}
 git clone https://github.com/aircrack-ng/aircrack-ng
