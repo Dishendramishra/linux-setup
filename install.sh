@@ -82,6 +82,7 @@ sudo apt install -y Telegram
 echo -e ${RED} Installing Oh-My-Zsh ${Color_Off}
 sudo apt install -y zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # adding plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
