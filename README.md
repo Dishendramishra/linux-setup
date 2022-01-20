@@ -320,6 +320,16 @@ youtube-dl -f bestvideo+bestaudio -i --add-metadata -o '%(playlist_index)s:%(tit
 
 <br>
 
+## Special Chars
+<pre>   Octal  Decimal      Hex        HTML    Character   Unicode
+    0100       64     <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">0x40</span>       @    <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">"@"</span>         COMMERCIAL AT
+     072       58     <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">0x3A</span>       :    <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">":"</span>         COLON
+     041       33     <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">0x21</span>       !    <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">"!"</span>         EXCLAMATION MARK
+     043       35     <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">0x23</span>       #    <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">"#"</span>         NUMBER SIGN
+     044       36     <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">0x24</span>       $    <span data-amp-original-style="color: rgb(0, 153, 0);" class="amp-wp-981e973">"$"</span>         DOLLAR SIGN
+</pre>
+
+
 ## Google drive
 
 1. [Enable Google Drive API](#1.-Enable-Google-Drive-API)
